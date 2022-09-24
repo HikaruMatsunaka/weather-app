@@ -1,0 +1,30 @@
+.container {
+  background-color: #000;
+  padding: 10px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  border-bottom: solid 1px white;
+}
+.header {
+  height: 53px;
+  vertical-align: middle;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+}
+.header_icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  width: 50px;
+  flex: 0 0 auto;
+  padding: 14px;
+  color: white;
+  &:hover {
+    color: gray;
+  }
+}
