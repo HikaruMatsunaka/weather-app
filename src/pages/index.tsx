@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Article from "../components/articles/Article";
 import { Header } from "../components/header/Header";
+import Nav from "../components/nav/Nav";
 import MainLayout from "../layouts/MainLayout";
 import styles from "../styles/Home.module.scss";
 
@@ -14,6 +15,9 @@ export default function Home(props) {
       <Head>
         <title>Simple News</title>
       </Head>
+      <nav>
+        <Nav />
+      </nav>
       <div className={styles.main}>
         <Article title="headlines" articles={props.topArticles} />
       </div>
