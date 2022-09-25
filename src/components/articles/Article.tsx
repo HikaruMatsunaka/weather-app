@@ -6,20 +6,22 @@
 import moment from "moment";
 import style from "./article.module.scss";
 import Image from "next/image";
+import Props from "../types";
 
 //コンポーネントのpropsに型注釈をつけておく
-type Props = {
-  articles?: [
-    article: {
-      author: string;
-      title: string;
-      publishedAt: string;
-      url: string;
-      urlToImage: string;
-    }
-  ];
-  title?: string;
-};
+//一貫して管理したいので、types.tsを作る
+// type Props = {
+//   articles?: [
+//     article: {
+//       author: string;
+//       title: string;
+//       publishedAt: string;
+//       url: string;
+//       urlToImage: string;
+//     }
+//   ];
+//   title?: string;
+// };
 
 //React.FCは、関数をReactのコンポーネントに型定義できる。
 //<型>を後ろにつけることでコンポーネントのpropsに型を付けれる
@@ -55,10 +57,13 @@ export const Article: React.FC<Props> = ({ articles, title }) => {
                 <p className={style.article_time}>{time}</p>
               </div>
               {article.urlToImage && (
-                <Image
+                //<img>じゃなくて、nextの<Img>を使えって出てくるけど無視してオッケー！
+                <img
                   key={index}
                   src={article.urlToImage}
                   alt={`${article.title}image`}
+                  width={40}
+                  height={40}
                 />
               )}
             </article>
