@@ -1,6 +1,3 @@
-//ここで、型定義をオブジェクトでまとめて行う
-//APIのtypeは基本的に、取得できるデータをconsole.logで参照してから追加する。
-
 type Props = {
   articles?: [
     article: {

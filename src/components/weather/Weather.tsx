@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Props from "../types";
-import styles from "../weather-news/index.module.scss";
+import styles from "./index.module.scss";
 
 const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sut"];
 
